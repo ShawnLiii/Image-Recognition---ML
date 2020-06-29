@@ -74,6 +74,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             // Get Label
             self.resultLbl.text = classification.isEmpty ? "I can't recognize the image, I have to learn more" : "This is most likely \(classification.first!.identifier), might also be \(classification[1].identifier)."
         }
+        
+        // Model request a square
+        request.imageCropAndScaleOption = .centerCrop
+        
         // Fetch and Perform Request
         do
         {
@@ -90,6 +94,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let image = info[.originalImage] as? UIImage else { return }
         
         pictureImageView.image = image
+        resultLbl.text = "Recognizing..."
         handlePictureByML(image: image)
         picker.dismiss(animated: true, completion: nil)
     }
