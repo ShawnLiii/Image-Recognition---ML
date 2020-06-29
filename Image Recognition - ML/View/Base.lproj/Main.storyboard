@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dxj-0Z-DZp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Recognition App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Recognition___ML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9GR-bq-ncb">
+                                <rect key="frame" x="0.0" y="175.5" width="414" height="720.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chj-aT-DOj">
+                                <rect key="frame" x="0.0" y="140" width="414" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="chj-aT-DOj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1g2-PG-pjA"/>
+                            <constraint firstItem="9GR-bq-ncb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DNE-If-oCJ"/>
+                            <constraint firstItem="9GR-bq-ncb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Om9-5I-76w"/>
+                            <constraint firstItem="chj-aT-DOj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rmr-ng-3RE"/>
+                            <constraint firstItem="chj-aT-DOj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S6o-Em-LJm"/>
+                            <constraint firstItem="9GR-bq-ncb" firstAttribute="top" secondItem="chj-aT-DOj" secondAttribute="bottom" constant="8" symbolic="YES" id="uyZ-Oa-CuN"/>
+                            <constraint firstAttribute="bottom" secondItem="9GR-bq-ncb" secondAttribute="bottom" id="w0m-ua-iEG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Recognition App" id="MKY-e3-mMj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="mtN-ay-Vgi">
+                            <color key="tintColor" systemColor="systemBlueColor"/>
+                            <connections>
+                                <action selector="pickImageTapped:" destination="BYZ-38-t0r" id="vO5-mO-TWh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pictureImageView" destination="9GR-bq-ncb" id="wAZ-99-0n8"/>
+                        <outlet property="resultLbl" destination="chj-aT-DOj" id="QMC-mc-AIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="95.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GFc-Qm-Opg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dxj-0Z-DZp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="kJH-nk-EkJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ny6-eW-D7r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eB7-zx-PD1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

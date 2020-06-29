@@ -13,6 +13,7 @@
 		3D8A503324A96F17000EC113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A503124A96F17000EC113 /* Main.storyboard */; };
 		3D8A503524A96F18000EC113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A503424A96F18000EC113 /* Assets.xcassets */; };
 		3D8A503824A96F18000EC113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A503624A96F18000EC113 /* LaunchScreen.storyboard */; };
+		3D8A504424A98E82000EC113 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A504324A98E82000EC113 /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D8A503424A96F18000EC113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8A503724A96F18000EC113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D8A503924A96F18000EC113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8A504324A98E82000EC113 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		3D8A502A24A96F17000EC113 /* Image Recognition - ML */ = {
 			isa = PBXGroup;
 			children = (
-				3D8A502B24A96F17000EC113 /* AppDelegate.swift */,
-				3D8A502D24A96F17000EC113 /* SceneDelegate.swift */,
-				3D8A502F24A96F17000EC113 /* ViewController.swift */,
-				3D8A503124A96F17000EC113 /* Main.storyboard */,
-				3D8A503424A96F18000EC113 /* Assets.xcassets */,
-				3D8A503624A96F18000EC113 /* LaunchScreen.storyboard */,
-				3D8A503924A96F18000EC113 /* Info.plist */,
+				3D8A504124A976EC000EC113 /* Common */,
+				3D8A504024A976DA000EC113 /* View */,
+				3D8A504224A976FA000EC113 /* SupportFile */,
 			);
 			path = "Image Recognition - ML";
+			sourceTree = "<group>";
+		};
+		3D8A503F24A976C3000EC113 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A502F24A96F17000EC113 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3D8A504024A976DA000EC113 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A503F24A976C3000EC113 /* Controller */,
+				3D8A503124A96F17000EC113 /* Main.storyboard */,
+				3D8A503624A96F18000EC113 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D8A504124A976EC000EC113 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A504324A98E82000EC113 /* MobileNetV2.mlmodel */,
+				3D8A502B24A96F17000EC113 /* AppDelegate.swift */,
+				3D8A502D24A96F17000EC113 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3D8A504224A976FA000EC113 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A503424A96F18000EC113 /* Assets.xcassets */,
+				3D8A503924A96F18000EC113 /* Info.plist */,
+			);
+			name = SupportFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +174,7 @@
 			files = (
 				3D8A503024A96F17000EC113 /* ViewController.swift in Sources */,
 				3D8A502C24A96F17000EC113 /* AppDelegate.swift in Sources */,
+				3D8A504424A98E82000EC113 /* MobileNetV2.mlmodel in Sources */,
 				3D8A502E24A96F17000EC113 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
